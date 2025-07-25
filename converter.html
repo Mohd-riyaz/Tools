@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="converter.css" />
+</head>
+<body>
+  <div class="converter-container">
+    <h2>🔁 Unit Converter</h2>
+
+    <div class="input-group">
+      <label for="type">Type</label>
+      <select id="type" onchange="updateUnits()">
+        <option value="length">Length</option>
+        <option value="weight">Weight</option>
+        <option value="temp">Temperature</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>From</label>
+      <select id="fromUnit"></select>
+    </div>
+
+    <div class="input-group">
+      <label>To</label>
+      <select id="toUnit"></select>
+    </div>
+
+    <div class="input-group">
+      <label>Value</label>
+      <input type="number" id="inputValue" oninput="convert()" />
+    </div>
+
+    <div class="result" id="result">Converted Value: —</div>
+    <a href="../index.html" class="back-btn">⬅ Back to Tools</a>
+  </div>
+
+  <script src="converter.js"></script>
+</body>
+</html>
